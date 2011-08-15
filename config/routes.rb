@@ -1,4 +1,8 @@
 Alfa::Application.routes.draw do
+  resources :galleries
+
+  resources :projects
+
   devise_for :admins
   resources :members
   match 'team' => 'members#index'

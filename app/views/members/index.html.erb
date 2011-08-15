@@ -1,33 +1,33 @@
-<h1>Listing members</h1>
-
-<table>
-  <tr>
-    <th>Name</th>
-    <th>Title</th>
-    <th>Bio</th>
-    <% if current_admin %>
-    <th></th>
-    <th></th>
-    <th></th>
-    <% end %>
-  </tr>
-
+<h3>TEAM</h3>
+<p class="wide_p">Accum dolor acillaor ing etummy nulputa tuerci blaorting eugait nos dit praessectet, quis alit nit nonullam dionum zzriure dit vulpute dunt adit et dolore dolor ad duissim velisi tet la facip erilisi.</p>
 <% @members.each do |member| %>
-  <tr>
-    <td><%= member.name %></td>
-    <td><%= member.title %></td>
-    <td><%= member.bio %></td>
-    <td><%= link_to 'Show', member %></td>
+<div class="tm_member">
+  <span class="tm_member_img">
+    <%= image_tag member.photo.url(:small) %>
+  </span>
+  <div class="tm_desc_wrap">
+    <h5 class="tm_member_h5">
+      <span class="member-name"><%= member.name %></span>, <%= member.title %>
+    </h5>
+    <p  class="tm_member_p">
+    Accum dolor acillaor ing etummy nulputa tuerci blaorting eugait nos dit praessectet, quis alit nit nonullam dionum zzriure dit vulpute dunt adit et dolore dolor ad duissim velisi tet la facip erilisi.Accum dolor acillaor ing etummy nulputa tuerci blaorting eugait nos dit praessectet, quis alit nit nonullam dionum zzriure dit vulpute dunt adit et dolore dolor ad duissim velisi tet la facip erilisi.Accum dolor acillaor ing etummy nulputa tuerci blaorting eugait nos dit praessectet, quis alit nit nonullam dionum zzriure dit vulpute dunt adit et dolore dolor ad duissim velisi tet la facip erilisi.Accum dolor acillaor ing etummy nulputa tuerci blaorting eugait nos dit praessectet, quis alit nit nonullam dionum zzriure dit vulpute dunt adit et dolore dolor ad duissim velisi tet la facip erilisi.  blaorting eugait nos dit praessectet, quis alit nit nonullam dionum zzriure dit vulpute dunt adit et dolore dolor ad duissim velisi tet la facip erilisi. blaorting eugait nos dit praessectet, quis alit nit nonullam dionum zzriure dit vulpute dunt adit et dolore dolor ad duissim velisi tet la facip erilisi.
+    </p>
     <% if current_admin %>
-    <td><%= link_to 'Edit', edit_member_path(member) %></td>
-    <td><%= link_to 'Destroy', member, confirm: 'Are you sure?', method: :delete %></td>
+      <p>
+      <%= link_to 'Edit', edit_member_path(member) %>
+      <br />
+      <%= link_to 'Destroy', member, confirm: 'Are you sure?', method: :delete %>
+      </p>
     <% end %>
-  </tr>
+  </div>
+</div>
 <% end %>
-</table>
-
 <br />
 
 <% if current_admin %>
+  <div style="clear:both; width:100%;">
+  <p>
 <%= link_to 'New Member', new_member_path %>
+  </p>
+</div>
 <% end %>
