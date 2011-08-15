@@ -1,4 +1,5 @@
 Alfa::Application.routes.draw do
+  devise_for :admins
   resources :members
   match 'team' => 'members#index'
 

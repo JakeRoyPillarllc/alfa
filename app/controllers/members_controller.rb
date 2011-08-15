@@ -1,4 +1,5 @@
 class MembersController < ApplicationController
+  before_filter :authenticate_admin!, :except => [:show, :index]
   # GET /members
   # GET /members.json
   def index

@@ -9,6 +9,10 @@ a:hover{color:red;}
 h3 {color:#FF0000; font-weight:bolder;}
 
 /* header */
+#header{
+height:100px;
+clear:both;
+}
 
 #hd_main_row {margin:35px 0 0 0; width:1024px; height:60px; clear:both; border-bottom:#FF0000 thin solid}
 #hd_logo {margin:0 0 0 25px; float:left;}
