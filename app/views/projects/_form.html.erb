@@ -37,6 +37,12 @@
     <%= f.label :zip %><br />
     <%= f.text_field :zip %>
   </div>
+  <div class="field">
+    <%= f.fields_for :galleries do |builder| %>
+      <%= render "gallery_fields", :f => builder %>
+    <% end %>
+    <p><%= link_to_add_fields "Add Image", f, :galleries %></p>
+  </div>
   <div class="actions">
     <%= f.submit %>
   </div>

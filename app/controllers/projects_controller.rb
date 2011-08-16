@@ -4,6 +4,7 @@ class ProjectsController < ApplicationController
   # GET /projects.json
   def index
     @projects = Project.all
+    @new_projs = Project.all
 
     respond_to do |format|
       format.html # index.html.erb
@@ -26,6 +27,9 @@ class ProjectsController < ApplicationController
   # GET /projects/new.json
   def new
     @project = Project.new
+    1.times do
+      content = @project.galleries.build
+    end
 
     respond_to do |format|
       format.html # new.html.erb

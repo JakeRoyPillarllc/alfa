@@ -1,48 +1,45 @@
-    <h3>
-            Projects
-    </h3>
-    <p  class="proj_p">
-                Accum dolor acillaor ing etummy nulputa tuerci blaorting eugait nos dit praessectet, quis alit nit nonullam dionum zzriure dit vulpute dunt adit et dolore dolor ad duissim velisi tet la facip erilisi.
-        </p>
-   <div id="proj_menu" class="pl_white_backg_b">
-        <!--start bottom content-->
-                <div class="proj_type_list">
-            <ul>
-                <li>
-                    <span class="pt_bot_li_title">
-                                <a href="projects_new.html">NEW PROJECTS</a>
-                    </span>
-                </li>
-                 <li>
-                    <span class="pt_bot_li_title">
-                                <a href="projects_resi.html">Residential PROJECTS</a>
-                    </span>
-                </li>
-                <li>
-                    <span class="pt_bot_li_title">
-                                <a href="projects_hosp.html">HOSpiTALity Projects</a>
-                    </span>
-                </li>
-                <li>
-                    <span class="pt_bot_li_title">
-                                <a href="projects_comm.html">Commercial Projects</a>
-                    </span>
-                </li>
-            </ul>
-            </div>
-   </div>
-<% @projects.each do |project| %>
+<script>
+$(function() {
+  $( "#accordion" ).accordion();
+});
+</script>
+<h3>
+  Projects
+</h3>
+<p  class="proj_p">
+Accum dolor acillaor ing etummy nulputa tuerci blaorting eugait nos dit praessectet, quis alit nit nonullam dionum zzriure dit vulpute dunt adit et dolore dolor ad duissim velisi tet la facip erilisi.
+</p>
+
+<div id="proj_menu" class="pl_white_backg_b">
+  <div class="proj_type_list">
+    <div id="accordion">
+      <%= render :partial => 'header', :locals => {:title => "NEW PROJECTS", :collection => @new_projs} -%>
+      <%= render :partial => 'header', :locals => {:title => "RESIDENTIAL PROJECTS", :collection => @new_projs} -%>
+      <%= render :partial => 'header', :locals => {:title => "HOSPITALITY PROJECTS", :collection => @new_projs} -%>
+      <%= render :partial => 'header', :locals => {:title => "COMMERCIAL PROJECTS", :collection => @new_projs} -%>
+    </div>
+  </div>
+</div>
+<%# @projects.each do |project| %>
+  <!--
   <tr>
-    <td><%= project.title %></td>
-    <td><%= project.description %></td>
-    <td><%= project.status %></td>
-    <td><%= project.city %></td>
-    <td><%= project.state %></td>
-    <td><%= project.zip %></td>
-    <td><%= link_to 'Show', project %></td>
-    <td><%= link_to 'Edit', edit_project_path(project) %></td>
-    <td><%= link_to 'Destroy', project, confirm: 'Are you sure?', method: :delete %></td>
+    <td><%#= project.title %></td>
+    <td><%#= project.description %></td>
+    <td><%#= project.status %></td>
+    <td><%#= project.city %></td>
+    <td><%#= project.state %></td>
+    <td><%#= project.zip %></td>
+    <td><%#= link_to 'Show', project %></td>
+    <td><%#= link_to 'Edit', edit_project_path(project) %></td>
+    <td><%#= link_to 'Destroy', project, confirm: 'Are you sure?', method: :delete %></td>
   </tr>
-<% end %>
+  -->
+<% # end %>
 <br />
 <%= link_to 'New Project', new_project_path %>
+
+
+
+
+
+

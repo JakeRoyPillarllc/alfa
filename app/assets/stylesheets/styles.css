@@ -64,7 +64,7 @@ div.tm_member{float:left; clear:both; padding:45px 0px 0px 35px;}
 .pl_black_backg .proj_list_col a:hover {color:#ff0000; }
 
 .proj_list_col_wrap{ width:500px;margin:-12px 0px 0px 35px; float:left; clear:left;}
-.proj_list_col{width:230px; float:left; padding: 0px 18px 0px 0px; }
+.proj_list_col{width:230px; padding: 0px 18px 0px 0px; }
 .proj_list_col ul{ padding:0px}
 .proj_list_col li.hd_tri{
 	list-style-position:outside;
@@ -113,3 +113,11 @@ div.tm_member{float:left; clear:both; padding:45px 0px 0px 35px;}
 #footer_bottom p{padding-right:60px; margin:4px 0px; font-weight:600; color:#CCCCCC;}
 #footer_b .proj_type_list{padding:0px 0px 10px 0px;}
 #footer_b .proj_type_list ul li{list-style-image:url(/images/triangle__11.png); list-style-position:outside;}
+
+ul li ul{
+margin: 1em;
+line-height: 1em;
+padding: 2em;
+}
+.proj_list_col{
+}
