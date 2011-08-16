@@ -1,0 +1,22 @@
+<div id="footer_b">
+  <div id="footer_top_b" class="">
+    <div class="proj_bktolink">
+      <a href="/projects">
+        <img src="/images/triangle__03.png" width="3" height="7"/>&nbsp;Back to Projects</a>        </div>
+    <!--start bottom content-->
+    <div style="clear:both">
+      <div style="float:left">
+        <%= render :partial => 'projects/accordion', :locals => {:class_wrapper => "pl_black_backg"} %>
+      </div>
+      <div style="float:right">
+        <% @project.galleries.each do |f| %>
+          <%= image_tag f.photo %>
+        <% end %>
+      </div>
+    </div>
+    </div><div id="footer_bottom" style=" ">
+    <p style="clear:both;text-align:center; margin-top:50px; padding-top:50px;">
+    © 1980-talfa development/management LLC 15 West 18th Street Street Suite 200 New York, NY 10011 Tel: (212)206-7820 Fax: (212)242-0055. All
+    </p>
+  </div>
+</div>

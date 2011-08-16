@@ -16,11 +16,11 @@ class ProjectsController < ApplicationController
   # GET /projects/1.json
   def show
     @project = Project.find(params[:id])
-
-    respond_to do |format|
-      format.html # show.html.erb
-      format.json { render json: @project }
-    end
+    render :layout => 'application_two'
+    #respond_to do |format|
+    #  format.html # show.html.erb
+    #  format.json { render json: @project }
+    #end
   end
 
   # GET /projects/new

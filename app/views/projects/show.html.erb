@@ -1,41 +1,25 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <b>Title:</b>
-  <%= @project.title %>
-</p>
-
-<p>
-  <b>Description:</b>
-  <%= @project.description %>
-</p>
-
-<p>
-  <b>Status:</b>
-  <%= @project.status %>
-</p>
-
-<p>
-  <b>City:</b>
-  <%= @project.city %>
-</p>
-
-<p>
-  <b>State:</b>
-  <%= @project.state %>
-</p>
-
-<p>
-  <b>Zip:</b>
-  <%= @project.zip %>
-</p>
-<% @project.galleries.each do |f| %>
-  <%= f.photo %>
-<% end %>
-
-
-
+<div id="content_wide" class="proj">
+  <div id="content_left">
+    <h3>
+      <%= @project.project_type %> Projects
+    </h3>
+    <h4>
+      <%= @project.title %>
+    </h4>
+    <p  class="left_p">
+    <%= @project.description %>
+    </p>
+  </div>
+  <div id="content_right">
+    <%= image_tag @project.photo.url, :height=>"599", :width=>"484" %>
+  </div>
+  <div class="proj_det_sub_img">
+    <%= image_tag @project.diagram.url %>
+  </div>
+</div>
 <% if(current_admin) %>
+<div style="clear:both; width:100%; height:20px;">
 <%= link_to 'Edit', edit_project_path(@project) %> |
 <%= link_to 'Back', projects_path %>
+</div>
 <% end %>

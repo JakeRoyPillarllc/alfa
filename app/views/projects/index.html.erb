@@ -1,25 +1,10 @@
-<script>
-$(function() {
-  $( "#accordion" ).accordion();
-});
-</script>
 <h3>
   Projects
 </h3>
 <p  class="proj_p">
 Accum dolor acillaor ing etummy nulputa tuerci blaorting eugait nos dit praessectet, quis alit nit nonullam dionum zzriure dit vulpute dunt adit et dolore dolor ad duissim velisi tet la facip erilisi.
 </p>
-
-<div id="proj_menu" class="pl_white_backg_b">
-  <div class="proj_type_list">
-    <div id="accordion">
-      <%= render :partial => 'header', :locals => {:title => "NEW PROJECTS", :collection => @new_projs} -%>
-      <%= render :partial => 'header', :locals => {:title => "RESIDENTIAL PROJECTS", :collection => @new_projs} -%>
-      <%= render :partial => 'header', :locals => {:title => "HOSPITALITY PROJECTS", :collection => @new_projs} -%>
-      <%= render :partial => 'header', :locals => {:title => "COMMERCIAL PROJECTS", :collection => @new_projs} -%>
-    </div>
-  </div>
-</div>
+<%= render :partial => 'projects/accordion', :locals => {:class_wrapper => "pl_white_backg"} %>
 <%# @projects.each do |project| %>
   <!--
   <tr>
@@ -36,7 +21,9 @@ Accum dolor acillaor ing etummy nulputa tuerci blaorting eugait nos dit praessec
   -->
 <% # end %>
 <br />
+<% if(current_admin) %>
 <%= link_to 'New Project', new_project_path %>
+<% end %>
 
 
 

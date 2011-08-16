@@ -10,7 +10,6 @@ h3 {color:#FF0000; font-weight:bolder;}
 
 /* header */
 #header{
-height:100px;
 clear:both;
 }
 
@@ -107,7 +106,7 @@ div.tm_member{float:left; clear:both; padding:45px 0px 0px 35px;}
 /*footer specific */
 
 #footer{float:left; clear:both; z-index:9999; }
-#footer_b{float:left; clear:both; background-image:url(/images/foot_background_02.jpg); background-position:top; z-index:9999;}
+#footer_b{min-height:500px; float:left; clear:both; background-image:url(/images/foot_background_02.jpg); background-position:top; z-index:9999;}
 #footer_top_b{ }
 #footer_bottom{width:1024px; text-align:right; color:#666666; font-size:11px;  text-transform:capitalize;}
 #footer_bottom p{padding-right:60px; margin:4px 0px; font-weight:600; color:#CCCCCC;}
@@ -120,4 +119,8 @@ line-height: 1em;
 padding: 2em;
 }
 .proj_list_col{
+    float:left;
+}
+.ui-accordion-content{
+clear:both;
 }

@@ -1,0 +1,20 @@
+
+<script>
+$(function() {
+  $( "#accordion" ).accordion();
+});
+</script>
+<div id="proj_menu" class="<%= class_wrapper %>">
+<%
+    @projects = Project.all
+    @new_projs = Project.all
+%>
+  <div class="proj_type_list">
+    <div id="accordion">
+      <%= render :partial => 'header', :locals => {:title => "NEW PROJECTS", :collection => @new_projs} -%>
+      <%= render :partial => 'header', :locals => {:title => "RESIDENTIAL PROJECTS", :collection => @new_projs} -%>
+      <%= render :partial => 'header', :locals => {:title => "HOSPITALITY PROJECTS", :collection => @new_projs} -%>
+      <%= render :partial => 'header', :locals => {:title => "COMMERCIAL PROJECTS", :collection => @new_projs} -%>
+    </div>
+  </div>
+</div>
