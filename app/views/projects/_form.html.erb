@@ -20,16 +20,18 @@
     <%= f.text_area :description %>
   </div>
   <div class="field">
-    <%= f.label :status %><br />
-    <%= f.text_field :status %>
+    <%= select( "project", "project_type", { "Residential" => "residential", "Commercial" => "commercial", "Hospitality" => "hospitality"}) %>
+  </div>
+  <div class="field">
+  <%= select( "project", "status", { "Available" => "available", "Sold Out" => "soldout"}) %>
   </div>
   <div class="field">
     <%= f.label :city %><br />
-    <%= f.text_field :city %>
+    <%= f.text_field :city, :value=>"New York City" %>
   </div>
   <div class="field">
     <%= f.label :state %><br />
-    <%= f.text_field :state %>
+    <%= f.text_field :state, :value=>"New York" %>
   </div>
   <div class="field">
     <%= f.label :zip %><br />

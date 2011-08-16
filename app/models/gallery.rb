@@ -1,2 +1,3 @@
 class Gallery < ActiveRecord::Base
+  belongs_to :project
 end

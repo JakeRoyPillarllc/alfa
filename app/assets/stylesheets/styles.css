@@ -68,13 +68,13 @@ div.tm_member{float:left; clear:both; padding:45px 0px 0px 35px;}
 .proj_list_col ul{ padding:0px}
 .proj_list_col li.hd_tri{
 	list-style-position:outside;
-	list-style-image: url(images/triangle_r_down.png);
+	list-style-image: url(/images/triangle_r_down.png);
 }
 .proj_list_col li.no_tri{
 	list-style-position:inside;
-	list-style-image: url(images/none_tri.png);
+	list-style-image: url(/images/none_tri.png);
 }
-.proj_list_col li{ list-style-image:url(images/triangle_r_right.png); list-style-position:inside; border-bottom:solid #000000 thin;}
+.proj_list_col li{ list-style-image:url(/images/triangle_r_right.png); list-style-position:inside; border-bottom:solid #000000 thin;}
 .proj_list_col li{ padding:5px 0px;}
 
 .pl_black_backg .proj_list_col li{ border-bottom:solid #fff thin;}
@@ -92,7 +92,7 @@ div.tm_member{float:left; clear:both; padding:45px 0px 0px 35px;}
 
 
 .proj_type_list{padding:10px 0px 15px 0px;  clear:both;}
-.proj_type_list ul li{list-style-image:url(images/triangle_r_right.png); list-style-position:inside;}
+.proj_type_list ul li{list-style-image:url(/images/triangle_r_right.png); list-style-position:inside;}
 .pt_bot_li_title a{font-weight:bold; color:#FF0000; text-transform:uppercase; font-size:14px;}
 
 .proj_det_sub_img{ padding-left:35px; clear:left; float:left; margin-top:-195px;}
@@ -107,9 +107,9 @@ div.tm_member{float:left; clear:both; padding:45px 0px 0px 35px;}
 /*footer specific */
 
 #footer{float:left; clear:both; z-index:9999; }
-#footer_b{float:left; clear:both; background-image:url(images/foot_background_02.jpg); background-position:top; z-index:9999;}
+#footer_b{float:left; clear:both; background-image:url(/images/foot_background_02.jpg); background-position:top; z-index:9999;}
 #footer_top_b{ }
 #footer_bottom{width:1024px; text-align:right; color:#666666; font-size:11px;  text-transform:capitalize;}
 #footer_bottom p{padding-right:60px; margin:4px 0px; font-weight:600; color:#CCCCCC;}
 #footer_b .proj_type_list{padding:0px 0px 10px 0px;}
-#footer_b .proj_type_list ul li{list-style-image:url(images/triangle__11.png); list-style-position:outside;}
+#footer_b .proj_type_list ul li{list-style-image:url(/images/triangle__11.png); list-style-position:outside;}
