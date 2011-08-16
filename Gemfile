@@ -35,3 +35,4 @@ end
 
 gem 'devise'
 gem 'paperclip'
+gem 'passenger'
