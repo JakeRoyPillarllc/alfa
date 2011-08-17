@@ -1,3 +1,19 @@
+
+<% content_for :javascript do %>
+<script type="text/javascript" src="/javascripts/tiny_mce/tiny_mce.js"></script>
+<script type="text/javascript">
+tinyMCE.init({
+  mode : "textareas",
+  theme : "simple"
+});
+</script>
+<script>
+  $(function() {
+    $("#tabs").tabs().addClass('ui-tabs-vertical ui-helper-clearfix');
+    $("#tabs li").removeClass('ui-corner-top').addClass('ui-corner-left');
+  });
+</script>
+<% end %>
 <%= form_for @member, :html => { :multipart => true } do |f| %>
   <% if @member.errors.any? %>
     <div id="error_explanation">
