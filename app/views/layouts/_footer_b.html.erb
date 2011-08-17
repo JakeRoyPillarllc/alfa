@@ -1,3 +1,19 @@
+<script type="text/javascript">
+  $(document).ready(function() {
+      $("a[rel=example_group]").fancybox({
+        'transitionIn'          : 'none',
+        'transitionOut'         : 'none',
+        'titlePosition'         : 'over',
+        'titleFormat'           : function(title, currentArray, currentIndex, currentOpts) {
+        return '<span id="fancybox-title-over">Image ' + (currentIndex + 1) + ' / ' + currentArray.length + (title.length ? ' &nbsp; ' + title : '') + '</span>';
+        }
+        });
+      /*
+       *   Examples - various
+       */
+
+      });
+</script>
 <div id="footer_b">
   <div id="footer_top_b" class="">
     <div class="proj_bktolink">
@@ -5,14 +21,23 @@
         <img src="/images/triangle__03.png" width="3" height="7"/>&nbsp;Back to Projects</a>        </div>
     <!--start bottom content-->
     <div style="clear:both">
-      <div style="float:left">
+      <div style="float:left; margin:20px;">
         <%= render :partial => 'projects/accordion', :locals => {:class_wrapper => "pl_black_backg"} %>
       </div>
-      <div style="float:right">
-        <% @project.galleries.each do |f| %>
-          <%= image_tag f.photo %>
+      <div class="images-right-footer">
+        <% @project.galleries.all(:limit=>2).each do |f| %>
+          <a rel="example_group" href="<%= f.photo.url %>"><%= image_tag f.photo %></a>
         <% end %>
       </div>
+      <% if(@project.galleries.count > 2) %>
+        <span class="pl_img_morelink">
+          <a rel="example_group" href="<%= @project.galleries.third.photo.url %>">View More Images
+            <img width="4" height="9" src="/images/triangle_r_right.png"></a>
+          <% @project.galleries(:offset=>3).each do |f| %>
+            <a rel="example_group" href="<%= f.photo.url %>"><%= image_tag f.photo %></a>
+          <% end %>
+        </span>
+      <% end %>
     </div>
     </div><div id="footer_bottom" style=" ">
     <p style="clear:both;text-align:center; margin-top:50px; padding-top:50px;">

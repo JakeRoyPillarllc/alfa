@@ -55,7 +55,7 @@ div.tm_member{float:left; clear:both; padding:45px 0px 0px 35px;}
 .proj_bktolink a:hover { color:#FF0000;}
 
 #proj_menu{}
-.pl_white_backg{ padding:30px 0px 15px 5px;}
+.pl_white_backg{ padding:30px 0px 15px 5px; float:left;}
 .pl_white_backg_b{ padding:0px 0px 15px 5px;}
 .pl_black_backg{ padding:30px 0px 15px 5px;}
 .pl_black_backg .proj_list_col {color:#ffffff; }
@@ -123,4 +123,10 @@ padding: 2em;
 }
 .ui-accordion-content{
 clear:both;
+}
+.images-right-footer{
+float:right; margin:10px;
+}
+.images-right-footer img{
+    margin:15px;
 }
