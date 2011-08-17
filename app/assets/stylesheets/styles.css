@@ -130,3 +130,8 @@ float:right; margin:10px;
 .images-right-footer img{
     margin:15px;
 }
+.admin-actions{
+width:100%;
+height:10px;
+clear:both;
+}

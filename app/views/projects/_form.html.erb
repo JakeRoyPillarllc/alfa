@@ -38,10 +38,13 @@
     <%= f.text_field :zip %>
   </div>
   <div class="field">
+    <% if(@project.diagram) %>
     <%= f.label :diagram %>
     <%= f.file_field :diagram %>
+    <% end %>
   </div>
   <div class="field">
+    <%= @project.photo %>
     <% if(@project.photo) %>
         <%= image_tag @project.photo %>
         <br />
