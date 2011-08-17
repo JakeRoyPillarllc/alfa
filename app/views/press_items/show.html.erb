@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Title:</b>
+  <%= @press_item.title %>
+</p>
+
+<p>
+  <b>Publication:</b>
+  <%= @press_item.publication %>
+</p>
+
+<p>
+  <b>Date:</b>
+  <%= @press_item.date %>
+</p>
+
+<p>
+  <b>Link:</b>
+  <%= @press_item.link %>
+</p>
+
+
+<%= link_to 'Edit', edit_press_item_path(@press_item) %> |
+<%= link_to 'Back', press_items_path %>

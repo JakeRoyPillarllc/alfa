@@ -1,0 +1,34 @@
+<h1>Listing press_items</h1>
+<h3>
+  Press
+</h3>
+<p  class="wide_p">
+Accum dolor acillaor ing etummy nulputa tuerci blaorting eugait nos dit praessectet, quis alit nit nonullam dionum zzriure dit vulpute dunt adit et dolore dolor ad duissim velisi tet la facip erilisi.
+</p>
+    <!--start press_item 1-->
+
+<% @press_items.each do |press_item| %>
+    <div class="press_item">
+        <span class="pi_title">
+                        <a href="<%= press_item.link %>"><%= press_item.title %></a> /
+        </span>
+        <span class="pi_publ">
+                        <%= press_item.publication %> /
+        </span>
+        <span class="pi_date">
+                        <%= press_item.date %>
+        </span>
+        <% if(current_admin) %>
+            <%= link_to 'Show', press_item %>
+            <%= link_to 'Edit', edit_press_item_path(press_item) %>
+            <%= link_to 'Destroy', press_item, confirm: 'Are you sure?', method: :delete %>
+        <% end %>
+    </div>
+<% end %>
+<br />
+<br />
+<br />
+<br />
+        <% if(current_admin) %>
+        <%= link_to 'New Press item', new_press_item_path %>
+        <% end %>

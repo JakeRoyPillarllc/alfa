@@ -33,9 +33,11 @@
         <span class="pl_img_morelink">
           <a rel="example_group" href="<%= @project.galleries.third.photo.url %>">View More Images
             <img width="4" height="9" src="/images/triangle_r_right.png"></a>
-          <% @project.galleries(:offset=>3).each do |f| %>
+            <div style="display:none" %>
+          <% @project.galleries.offset(3).each do |f| %>
             <a rel="example_group" href="<%= f.photo.url %>"><%= image_tag f.photo %></a>
           <% end %>
+            </div>
         </span>
       <% end %>
     </div>

@@ -1,4 +1,8 @@
 Alfa::Application.routes.draw do
+  resources :press_items
+  match 'press' => 'press_items#index'
+
+
   resources :galleries
 
   resources :projects
