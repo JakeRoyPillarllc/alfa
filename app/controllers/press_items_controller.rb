@@ -1,4 +1,5 @@
 class PressItemsController < ApplicationController
+  before_filter :authenticate_admin!, :except => [:show, :index]
   # GET /press_items
   # GET /press_items.json
   def index
