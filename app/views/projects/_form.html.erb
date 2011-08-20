@@ -44,8 +44,7 @@
     <% end %>
   </div>
   <div class="field">
-    <%= @project.photo %>
-    <% if(@project.photo) %>
+    <% if(@project.photo?) %>
         <%= image_tag @project.photo %>
         <br />
     <% end %>
