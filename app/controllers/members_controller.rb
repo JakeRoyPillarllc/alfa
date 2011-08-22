@@ -3,7 +3,7 @@ class MembersController < ApplicationController
   # GET /members
   # GET /members.json
   def index
-    @members = Member.all
+    @members = Member.find(:all, :order=>'sort_order')
 
     respond_to do |format|
       format.html # index.html.erb
