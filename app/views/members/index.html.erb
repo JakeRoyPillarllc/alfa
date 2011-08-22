@@ -10,7 +10,7 @@
       <span class="member-name"><%= member.name %></span>, <%= member.title %>
     </h5>
     <p  class="tm_member_p">
-    <%= member.bio %>
+    <%= raw member.bio %>
     </p>
     <% if current_admin %>
       <p>
