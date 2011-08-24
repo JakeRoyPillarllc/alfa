@@ -10,6 +10,10 @@
       STATUS
     </span>
     </li>
+      <% if(collection.size > 0) then %>
       <%= render :partial => "project", :collection => collection %>
+      <% else %>
+      <%= "coming soon" %>
+      <% end %>
   </ul>
 </div>
