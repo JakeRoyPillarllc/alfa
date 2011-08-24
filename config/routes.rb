@@ -1,4 +1,6 @@
 Alfa::Application.routes.draw do
+  resources :project_types
+
   resources :press_items
   match 'press' => 'press_items#index'
   match 'contact' => 'home#contact'
@@ -17,6 +19,7 @@ Alfa::Application.routes.draw do
 
   # Sample of regular route:
   match 'about' => 'about#index'
+  root :to => 'about#index'
   # Keep in mind you can assign values other than :controller and :action
 
   # Sample of named route:
@@ -61,7 +64,6 @@ Alfa::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  root :to => 'home#index'
 
   # See how all your routes lay out with "rake routes"
 

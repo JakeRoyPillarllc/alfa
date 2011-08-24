@@ -6,15 +6,17 @@ $(function() {
 </script>
 <div id="proj_menu" class="<%= class_wrapper %>">
 <%
-    @projects = Project.all
-    @new_projs = Project.all
+    @new_projs = ProjectType.where(:title=>"new").first.projects
+    @res_projs = ProjectType.where(:title=>"residential").first.projects
+    @com_projs = ProjectType.where(:title=>"commercial").first.projects
+    @hos_projs = ProjectType.where(:title=>"hospitality").first.projects
 %>
   <div class="proj_type_list">
     <div id="accordion">
       <%= render :partial => 'header', :locals => {:title => "NEW PROJECTS", :collection => @new_projs} -%>
-      <%= render :partial => 'header', :locals => {:title => "RESIDENTIAL PROJECTS", :collection => @new_projs} -%>
-      <%= render :partial => 'header', :locals => {:title => "HOSPITALITY PROJECTS", :collection => @new_projs} -%>
-      <%= render :partial => 'header', :locals => {:title => "COMMERCIAL PROJECTS", :collection => @new_projs} -%>
+      <%= render :partial => 'header', :locals => {:title => "RESIDENTIAL PROJECTS", :collection => @res_projs} -%>
+      <%= render :partial => 'header', :locals => {:title => "HOSPITALITY PROJECTS", :collection => @com_projs} -%>
+      <%= render :partial => 'header', :locals => {:title => "COMMERCIAL PROJECTS", :collection => @hos_projs} -%>
     </div>
   </div>
 </div>

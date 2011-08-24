@@ -1,9 +1,6 @@
 <h3>TEAM</h3>
 <% @members.each do |member| %>
 <div class="tm_member">
-  <span class="tm_member_img">
-    <%= image_tag member.photo.url(:small) %>
-  </span>
   <div class="tm_desc_wrap">
     <h5 class="tm_member_h5">
       <span class="member-name"><%= member.name %></span>, <%= member.title %>

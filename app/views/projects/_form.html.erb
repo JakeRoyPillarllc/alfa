@@ -19,9 +19,12 @@
     <%= f.label :description %><br />
     <%= f.text_area :description %>
   </div>
-  <div class="field">
-    <%= select( "project", "project_type", { "Residential" => "residential", "Commercial" => "commercial", "Hospitality" => "hospitality"}) %>
+  <% for project_type in ProjectType.find(:all) %>
+  <div>
+    <%= check_box_tag "project[project_type_ids][]", project_type.id, @project.project_types.include?(project_type) %>
+    <%= project_type.title %>
   </div>
+  <% end %>
   <div class="field">
   <%= select( "project", "status", { "Available" => "available", "Sold Out" => "soldout"}) %>
   </div>

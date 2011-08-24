@@ -7,14 +7,16 @@
       <%= @project.title %>
     </h4>
     <p  class="left_p">
-    <%= @project.description %>
+    <%= raw @project.description %>
     </p>
   </div>
   <div id="content_right">
     <%= image_tag @project.photo.url, :height=>"599", :width=>"484" %>
   </div>
   <div class="proj_det_sub_img">
+    <% if(!@project.diagram.url.match(/missing/)) then  %>
     <%= image_tag @project.diagram.url %>
+    <% end %>
   </div>
 </div>
 <% if(current_admin) %>

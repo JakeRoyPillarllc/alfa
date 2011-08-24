@@ -43,7 +43,7 @@ clear:both;
 
 /* team page */
 
-div.tm_member{float:left; clear:both; padding:45px 0px 0px 35px;}
+div.tm_member{float:left; clear:both; padding:20px 0px 0px 35px;}
 .tm_member_img{ float:left; clear:left; }
 .tm_desc_wrap{ float:left; clear:right; padding:0px 0px 0px 15px; width:875px;}
 .tm_member_h5{padding:0px 0px 5px 0px; margin:0px 0px 2px 0px; color:#FF0000;}
@@ -63,7 +63,7 @@ div.tm_member{float:left; clear:both; padding:45px 0px 0px 35px;}
 .pl_black_backg .proj_list_col a:hover {color:#ff0000; }
 
 .proj_list_col_wrap{ width:500px;margin:-12px 0px 0px 35px; float:left; clear:left;}
-.proj_list_col{width:230px; padding: 0px 18px 0px 0px; }
+.proj_list_col{width:290px; padding: 0px 18px 0px 0px; }
 .proj_list_col ul{ padding:0px}
 .proj_list_col li.hd_tri{
 	list-style-position:outside;
@@ -134,4 +134,8 @@ float:right; margin:10px;
 width:100%;
 height:10px;
 clear:both;
+}
+.narrow-content-wrap{
+width:90%;
+margin:30px auto;
 }
