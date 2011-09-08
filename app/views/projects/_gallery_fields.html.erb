@@ -1,6 +1,6 @@
 <div class="field">
   <% if(f.object.photo?) %>
-  <%= image_tag f.object.photo %>
+  <%= image_tag f.object.photo.url(:small) %>
   <% end %>
   <%= f.label :photo %>
   <%= f.file_field :photo %>

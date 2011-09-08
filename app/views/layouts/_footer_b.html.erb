@@ -22,7 +22,7 @@
       </div>
       <div class="images-right-footer">
         <% @project.galleries.all(:limit=>2).each do |f| %>
-          <a rel="example_group" href="<%= f.photo.url %>"><%= image_tag f.photo.url(:medium) %></a>
+          <a rel="example_group" href="<%= f.photo.url %>"><%= image_tag f.photo.url(:medium), :height=>"150px" %></a>
         <% end %>
       </div>
       <% if(@project.galleries.count > 2) %>

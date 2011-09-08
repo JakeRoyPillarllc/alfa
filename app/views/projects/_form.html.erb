@@ -41,14 +41,15 @@
     <%= f.text_field :zip %>
   </div>
   <div class="field">
-    <% if(@project.diagram) %>
+  <% if(@project.diagram) %>
+    <%= image_tag @project.photo.url(:small) %>
+  <% end %>
     <%= f.label :diagram %>
     <%= f.file_field :diagram %>
-    <% end %>
   </div>
   <div class="field">
     <% if(@project.photo?) %>
-        <%= image_tag @project.photo %>
+        <%= image_tag @project.photo.url(:small) %>
         <br />
     <% end %>
     <%= f.label :photo %>
