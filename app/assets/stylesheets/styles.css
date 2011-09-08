@@ -1,3 +1,4 @@
+a:active { outline: none }
 @charset "utf-8";
 /* CSS Document */
 body{width:1024px; background-color:fff; margin:0px auto; font-family:Helvetica, Arial, sans-serif; height:auto }

@@ -4,7 +4,7 @@ set :application, "alfa"
 # setup RVM
 $:.unshift(File.expand_path('./lib', ENV['rvm_path']))
 require "rvm/capistrano"
-set :rvm_ruby_string, "ruby-1.9.2-p180@#{application}"
+set :rvm_ruby_string, "ruby-1.9.2-p290@#{application}"
 set :rvm_type, :user
 #set :default_environment, {
 #  'PATH' => "/path/to/.rvm/gems/ruby/1.9.2-p180@#{application}/bin:/path/to/.rvm/bin:/path/to/.rvm/rubies/ruby-1.9.2-p180/bin:$PATH",
