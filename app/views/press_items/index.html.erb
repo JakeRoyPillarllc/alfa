@@ -1,3 +1,4 @@
+<% if(@press_items.count > 0) then %>
 <% @press_items.each do |press_item| %>
     <div class="press_item">
         <span class="pi_title">
@@ -20,6 +21,15 @@
 <br />
 <br />
 <br />
+<% else %>
+<br />
+<br />
+  <h4 style="text-align:center">This part of the website is currently under construction.</h4>
+<br />
+<br />
+<br />
+<br />
+<% end %>
         <% if(current_admin) %>
         <%= link_to 'New Press item', new_press_item_path %>
         <% end %>
