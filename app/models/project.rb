@@ -7,7 +7,7 @@ class Project < ActiveRecord::Base
   validates_attachment_size :photo, :less_than => 15.megabytes
   validates_attachment_content_type :photo, :content_type => ['image/jpeg', 'image/png', 'image/gif']
 
-  has_attached_file :diagram, :styles => { :small => "137x110" }
+  has_attached_file :diagram, :styles => { :small => "137x110", :medium => "274X220" }
   validates_attachment_size :diagram, :less_than => 5.megabytes
   validates_attachment_content_type :diagram, :content_type => ['image/jpeg', 'image/png', 'images/gif']
 

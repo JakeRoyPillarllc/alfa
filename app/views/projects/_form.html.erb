@@ -30,7 +30,7 @@
   </div>
   <% end %>
   <div class="field">
-  <%= select( "project", "status", { "Available" => "available", "Sold Out" => "soldout"}) %>
+    <%= select( "project", "status", { "Completed" => "completed", "Now Selling" => "now selling", "Sold Out" => "soldout", "Upcoming" => "upcoming"}) %>
   </div>
   <div class="field">
     <%= f.label :city %><br />

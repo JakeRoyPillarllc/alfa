@@ -15,7 +15,7 @@
   </div>
   <div class="proj_det_sub_img">
     <% if(!@project.diagram.url.match(/missing/)) then  %>
-    <%= image_tag @project.diagram.url %>
+    <%= image_tag @project.diagram.url(:medium) %>
     <% end %>
   </div>
 </div>
