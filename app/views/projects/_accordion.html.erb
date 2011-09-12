@@ -6,7 +6,7 @@ $(function() {
 </script>
 <div id="proj_menu" class="<%= class_wrapper %>">
 <%
-    @new_projs = ProjectType.where(:title=>"new").first.projects
+    @new_projs = ProjectType.where(:title=>"new").first.projects(:order_by=>"sort_order")
     @res_projs = ProjectType.where(:title=>"residential").first.projects
     @com_projs = ProjectType.where(:title=>"commercial").first.projects
     @hos_projs = ProjectType.where(:title=>"hospitality").first.projects

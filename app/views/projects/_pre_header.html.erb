@@ -1,0 +1,28 @@
+<div class="pt_bot_li_title">
+  <a href="#" onclick="return false;" return false;><%= title %></a>
+</div>
+<div>
+  <ul class="proj_list_col list2col">
+    <li class="no_tri">
+    <span class="pl_head_title">
+    </span>
+    <span class="pl_head_last">
+      STATUS
+    </span>
+    </li>
+      <% if(collection.size > 0) then %>
+        <% if(collection.size > 6) then %>
+          <% i = 0
+          count = collection.count
+          group_one, group_two = collection.partition { i += 1; i < count / 2 }
+          %>
+          <%= render :partial => "project", :collection => group_one %>
+          <%= render :partial => "project", :collection => group_two %>
+        <% else %>
+        <%= render :partial => "project", :collection => collection %>
+        <% end %>
+      <% else %>
+      <%= "coming soon" %>
+      <% end %>
+  </ul>
+</div>

@@ -1,0 +1,45 @@
+<script type="text/javascript">
+  $(document).ready(function() {
+      $("a[rel=example_group]").fancybox({
+        'transitionIn'          : 'none',
+        'transitionOut'         : 'none',
+        'titlePosition'         : 'over',
+        'titleFormat'           : function(title, currentArray, currentIndex, currentOpts) {
+        return '<span id="fancybox-title-over">Image ' + (currentIndex + 1) + ' / ' + currentArray.length + (title.length ? ' &nbsp; ' + title : '') + '</span>';
+        }
+        });
+      });
+</script>
+<div id="footer_b">
+  <div id="footer_top_b" class="">
+    <div class="proj_bktolink">
+      <a href="/projects">
+        <img src="/images/triangle__03.png" width="3" height="7"/>&nbsp;Back to Projects</a>        </div>
+    <!--start bottom content-->
+    <div style="clear:both">
+      <div style="float:left; margin:20px; width:400px;">
+        <%= render :partial => 'projects/accordion', :locals => {:class_wrapper => "pl_black_backg"} %>
+      </div>
+      <div class="images-right-footer">
+        <% @project.galleries.all(:limit=>2).each do |f| %>
+          <a rel="example_group" href="<%= f.photo.url %>"><%= image_tag f.photo.url(:medium), :height=>"150px" %></a>
+        <% end %>
+      </div>
+      <% if(@project.galleries.count > 2) %>
+        <span class="pl_img_morelink">
+          <a rel="example_group" href="<%= @project.galleries.third.photo.url %>">View More Images
+            <img width="4" height="9" src="/images/triangle_r_right.png"></a>
+            <div style="display:none" %>
+          <% @project.galleries.offset(3).each do |f| %>
+            <a rel="example_group" href="<%= f.photo.url %>"><%= image_tag f.photo(:small) %></a>
+          <% end %>
+            </div>
+        </span>
+      <% end %>
+    </div>
+    </div><div id="footer_bottom" style=" ">
+    <p style="clear:both;text-align:center; margin-top:50px; padding-top:50px;">
+    © 1980-talfa development/management LLC 15 West 18th Street Street Suite 200 New York, NY 10011 Tel: (212)206-7820 Fax: (212)242-0055. All
+    </p>
+  </div>
+</div>

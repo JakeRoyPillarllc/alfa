@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110824173748) do
+ActiveRecord::Schema.define(:version => 20110912150241) do
 
   create_table "admins", :force => true do |t|
     t.string   "email",                                 :default => "", :null => false
@@ -162,6 +162,7 @@ ActiveRecord::Schema.define(:version => 20110824173748) do
     t.string   "photo_content_type"
     t.integer  "photo_file_size"
     t.datetime "photo_updated_at"
+    t.integer  "sort_order",           :default => 100
   end
 
   create_table "refinery_settings", :force => true do |t|
