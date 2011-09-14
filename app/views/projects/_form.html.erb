@@ -46,7 +46,7 @@
   </div>
   <div class="field">
   <% if(@project.diagram) %>
-    <%= image_tag @project.photo.url(:small) %>
+    <%= image_tag @project.diagram.url(:small) %>
   <% end %>
     <%= f.label :diagram %>
     <%= f.file_field :diagram %>
