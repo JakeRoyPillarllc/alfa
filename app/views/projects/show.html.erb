@@ -9,14 +9,14 @@
     <p  class="left_p">
     <%= raw @project.description %>
     </p>
-  </div>
-  <div id="content_right">
-    <%= image_tag @project.photo.url(:large), :height=>"599" %>
-  </div>
   <div class="proj_det_sub_img">
     <% if(!@project.diagram.url.match(/missing/)) then  %>
     <%= image_tag @project.diagram.url(:medium) %>
     <% end %>
+  </div>
+  </div>
+  <div id="content_right">
+    <%= image_tag @project.photo.url(:large), :height=>"599" %>
   </div>
 </div>
 <% if(current_admin) %>
