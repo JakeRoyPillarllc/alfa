@@ -56,7 +56,7 @@
         <%= image_tag @project.photo.url(:small) %>
         <br />
     <% end %>
-    <%= f.label :photo %>
+    <%= f.label :photo, :value=>"Main Photo" %>
     <%= f.file_field :photo %>
   </div>
   <div class="field">
