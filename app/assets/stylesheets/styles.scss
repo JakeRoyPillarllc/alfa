@@ -13,7 +13,7 @@ h3 {color:#FF0000; font-weight:bolder;}
 clear:both;
 }
 
-#hd_main_row {margin:35px 0 0 0; width:1024px; height:60px; clear:both; border-bottom:#FF0000 thin solid}
+#hd_main_row {margin:35px 0 0 0; width:1040px; height:60px; clear:both; border-bottom:#FF0000 thin solid}
 #hd_logo {margin:0 0 0 25px; float:left;}
 
 .hori_nav_bar{float:left;}
@@ -21,8 +21,8 @@ clear:both;
 .hori_nav_bar li{ display:inline; border-right:#000000 thin solid;padding:3px 0px; margin:5px 0px;}
 .hori_nav_bar li a{padding:0px 14px 0px 11px; font-weight:600; text-transform:uppercase; font-size:12px;}
 
-#hd_tagline {float:left; height:60px; font-size:11px; font-weight:599;}
-#hd_tagline p{ text-align:right;  text-transform:uppercase; margin:20px 0 0 0; padding:0 0 0 30px; letter-spacing:.000001em;}
+#hd_tagline {float:right; height:60px; font-size:11px; font-weight:599;}
+#hd_tagline p{ text-align:right;  text-transform:uppercase; margin:20px 0 0 0; letter-spacing:.000001em;}
 
 /* content styles */
 
