@@ -48,4 +48,4 @@ gem 'sass-rails',   '~> 3.1.4'
 gem 'therubyracer'
 gem 'will_paginate', '3.0.pre2'
 gem 'heroku'
-gem 'rails_admin', :path => '/srv/gems/rails_admin'
+gem 'rails_admin', :git => "git://github.com/sferik/rails_admin.git"
