@@ -1,23 +1,26 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.1.0.rc8'
+gem 'rails', '3.1.1'
 
 # Bundle edge Rails instead:
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'
 
+#gem 'sqlite3'
 gem 'mysql2'
-gem 'paperclip'
 
 
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
-  gem 'sass-rails', "~> 3.1.0.rc"
-  gem 'coffee-rails', "~> 3.1.0.rc"
-  gem 'uglifier'
+#  gem 'sass-rails',   '~> 3.1.4'
+  gem 'coffee-rails', '~> 3.1.1'
+  gem 'uglifier', '>= 1.0.3'
 end
 
-gem 'jquery-rails'
+gem 'jquery-rails',  '~> 1.0.17'
+
+# To use ActiveModel has_secure_password
+# gem 'bcrypt-ruby', '~> 3.0.0'
 
 # Use unicorn as the web server
 # gem 'unicorn'
@@ -33,6 +36,16 @@ group :test do
   gem 'turn', :require => false
 end
 
+gem 'rspec-rails'
 gem 'devise'
 gem 'paperclip'
+#gem 'activeadmin'
+gem "ckeditor", :git => "git://github.com/galetahub/ckeditor.git"
+gem 'capistrano'
+gem 'capistrano-ext'
 gem 'passenger'
+gem 'sass-rails',   '~> 3.1.4'
+gem 'therubyracer'
+gem 'will_paginate', '3.0.pre2'
+gem 'heroku'
+gem 'rails_admin', :path => '/srv/gems/rails_admin'
