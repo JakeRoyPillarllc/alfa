@@ -1,4 +1,8 @@
 Alfa::Application.routes.draw do
+  mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
+
+  devise_for :users
+
   resources :project_types
 
   resources :press_items
@@ -10,7 +14,6 @@ Alfa::Application.routes.draw do
 
   resources :projects
 
-  devise_for :admins
   resources :members
   match 'team' => 'members#index'
 

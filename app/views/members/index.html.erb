@@ -8,22 +8,7 @@
     <div style="margin-top:-20px">
     <%= raw member.bio %>
     </div>
-    <% if current_admin %>
-      <p>
-      <%= link_to 'Edit', edit_member_path(member) %>
-      <br />
-      <%= link_to 'Destroy', member, confirm: 'Are you sure?', method: :delete %>
-      </p>
-    <% end %>
   </div>
 </div>
 <% end %>
 <br />
-
-<% if current_admin %>
-  <div style="clear:both; width:100%;">
-  <p>
-<%= link_to 'New Member', new_member_path %>
-  </p>
-</div>
-<% end %>

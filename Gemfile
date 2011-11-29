@@ -37,7 +37,6 @@ group :test do
 end
 
 gem 'rspec-rails'
-gem 'devise'
 gem 'paperclip'
 #gem 'activeadmin'
 gem "ckeditor", :git => "git://github.com/galetahub/ckeditor.git"
@@ -49,3 +48,5 @@ gem 'therubyracer'
 gem 'will_paginate', '3.0.pre2'
 gem 'heroku'
 gem 'rails_admin', :git => "git://github.com/sferik/rails_admin.git"
+
+gem "devise"

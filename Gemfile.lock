@@ -6,15 +6,17 @@ GIT
       mime-types (~> 1.16)
       orm_adapter (~> 0.0.5)
 
-PATH
-  remote: /srv/gems/rails_admin
+GIT
+  remote: git://github.com/sferik/rails_admin.git
+  revision: e5c769d606d19e0fb0580c94267789b1614296d6
   specs:
     rails_admin (0.0.1)
+      bbenezech-nested_form (~> 0.0.2)
       bootstrap-sass (~> 1.4)
       builder (~> 3.0)
       coffee-rails (~> 3.1)
       haml (~> 3.1)
-      jquery-rails (~> 1.0.17)
+      jquery-rails (~> 1.0.19)
       kaminari (~> 0.12.4)
       rack-pjax
       rails (~> 3.1)
@@ -54,6 +56,7 @@ GEM
     addressable (2.2.6)
     ansi (1.4.1)
     arel (2.2.1)
+    bbenezech-nested_form (0.0.2)
     bcrypt-ruby (3.0.1)
     bootstrap-sass (1.4.0)
       sass-rails (~> 3.1.0)
@@ -84,7 +87,7 @@ GEM
     execjs (1.2.9)
       multi_json (~> 1.0)
     fastthread (1.0.7)
-    haml (3.1.3)
+    haml (3.1.4)
     heroku (2.14.0)
       launchy (>= 0.3.2)
       rest-client (~> 1.6.1)
@@ -92,7 +95,7 @@ GEM
       term-ansicolor (~> 1.0.5)
     highline (1.6.8)
     hike (1.2.1)
-    hpricot (0.8.4)
+    hpricot (0.8.5)
     i18n (0.6.0)
     jquery-rails (1.0.19)
       railties (~> 3.0)

@@ -10,11 +10,6 @@
         <span class="pi_date">
                         <%= press_item.date %>
         </span>
-        <% if(current_admin) %>
-            <%= link_to 'Show', press_item %>
-            <%= link_to 'Edit', edit_press_item_path(press_item) %>
-            <%= link_to 'Destroy', press_item, confirm: 'Are you sure?', method: :delete %>
-        <% end %>
     </div>
 <% end %>
 <br />
@@ -30,6 +25,3 @@
 <br />
 <br />
 <% end %>
-        <% if(current_admin) %>
-        <%= link_to 'New Press item', new_press_item_path %>
-        <% end %>
