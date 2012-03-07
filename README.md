@@ -1,4 +1,4 @@
-==MySQL on Mac OS X
+== MySQL on Mac OS X
 
 1. Install [Homebrew][homebrew]
 `/usr/bin/ruby -e "$(curl -fsSL https://raw.github.com/gist/323731)"`
@@ -17,7 +17,7 @@ Stop the server with
 5. If you run into trouble importing SQL files, increase the max allowed packet size
 `cat /etc/my.cnf`
 [mysqld]
-##Max packetlength to send/receive from to server.
+#Max packetlength to send/receive from to server.
 max_allowed_packet=64M
 
 6. If needed, specify mysql2 in your Gemfile
@@ -26,6 +26,20 @@ max_allowed_packet=64M
 
 
 [homebrew]:[https://github.com/mxcl/homebrew/]
+
+MySQL install info is in the Readme.
+CREATE USER 'alfa'@'localhost' IDENTIFIED BY 'alfa';
+
+FYI, after I got the default homebrew mysql install running, and after importing the project's SQL file, I had to do an extra step to get privileges working. Each individual table had to be included in with the privs.
+i.e. 
+USE alfa_development;
+GRANT SELECT, INSERT, UPDATE, DELETE, DROP, ALTER ON * to 'alfa'@'localhost';
+didn't seem to affect things, but this does:
+GRANT SELECT, INSERT, UPDATE, DELETE, DROP, ALTER on projects to 'alfa'@'localhost';
+GRANT SELECT, INSERT, UPDATE, DELETE, DROP, ALTER on press_items to 'alfa'@'localhost';
+and so on.
+
+
 
 == Welcome to Rails
 
