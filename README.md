@@ -1,3 +1,32 @@
+== MySQL on Mac OS X
+
+1. Install [Homebrew][homebrew]
+`/usr/bin/ruby -e "$(curl -fsSL https://raw.github.com/gist/323731)"`
+
+2. Install MySQL
+`brew install mysql`
+
+3. Start the server with 
+`mysql.server start`
+Stop the server with
+`mysql.server stop`
+
+4. If you need autostart on boot, refer to 
+`brew info mysql`
+
+5. If you run into trouble importing SQL files, increase the max allowed packet size
+`cat /etc/my.cnf`
+[mysqld]
+#Max packetlength to send/receive from to server.
+max_allowed_packet=64M
+
+6. If needed, specify mysql2 in your Gemfile
+`gem 'mysql2'`
+`bundle install`
+
+
+[homebrew]:[https://github.com/mxcl/homebrew/]
+
 == Welcome to Rails
 
 Rails is a web-application framework that includes everything needed to create
