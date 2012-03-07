@@ -190,38 +190,38 @@ RailsAdmin.config do |config|
   #   create do; end
   #   update do; end
   # end
-  # config.model Project do
-  #   # Found associations:
-  #     field :galleries, :has_many_association 
-  #     field :project_types, :has_and_belongs_to_many_association   #   # Found columns:
-  #     field :id, :integer 
-  #     field :title, :string 
-  #     field :description, :text 
-  #     field :status, :string 
-  #     field :city, :string 
-  #     field :state, :string 
-  #     field :zip, :string 
-  #     field :project_type, :string 
-  #     field :created_at, :datetime 
-  #     field :updated_at, :datetime 
-  #     field :diagram_file_name, :string         # Hidden 
-  #     field :diagram_content_type, :string         # Hidden 
-  #     field :diagram_file_size, :integer         # Hidden 
-  #     field :diagram_updated_at, :datetime         # Hidden 
-  #     field :diagram, :paperclip 
-  #     field :photo_file_name, :string         # Hidden 
-  #     field :photo_content_type, :string         # Hidden 
-  #     field :photo_file_size, :integer         # Hidden 
-  #     field :photo_updated_at, :datetime         # Hidden 
-  #     field :photo, :paperclip 
-  #     field :sort_order, :integer   #   # Sections:
-  #   list do; end
-  #   export do; end
-  #   show do; end
-  #   edit do; end
-  #   create do; end
-  #   update do; end
-  # end
+   config.model Project do
+     # Found associations:
+       #field :galleries, :has_many_association 
+       field :project_types, :has_and_belongs_to_many_association   #   # Found columns:
+       #field :id, :integer 
+       field :title, :string 
+       field :description, :text 
+       field :status, :string 
+       field :city, :string 
+       field :state, :string 
+       field :zip, :string 
+       #field :project_type, :string 
+       #field :created_at, :datetime 
+       #field :updated_at, :datetime 
+       #field :diagram_file_name, :string         # Hidden 
+       #field :diagram_content_type, :string         # Hidden 
+       #field :diagram_file_size, :integer         # Hidden 
+       #field :diagram_updated_at, :datetime         # Hidden 
+       field :diagram, :paperclip 
+       #field :photo_file_name, :string         # Hidden 
+       #field :photo_content_type, :string         # Hidden 
+       #field :photo_file_size, :integer         # Hidden 
+       #field :photo_updated_at, :datetime         # Hidden 
+       field :photo, :paperclip 
+       field :sort_order, :integer   #   # Sections:
+     list do; end
+     export do; end
+     show do; end
+     edit do; end
+     create do; end
+     update do; end
+   end
   # config.model ProjectType do
   #   # Found associations:
   #     field :projects, :has_and_belongs_to_many_association   #   # Found columns:
