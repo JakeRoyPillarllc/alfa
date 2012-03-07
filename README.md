@@ -1,4 +1,4 @@
-== MySQL on Mac OS X
+==MySQL on Mac OS X
 
 1. Install [Homebrew][homebrew]
 `/usr/bin/ruby -e "$(curl -fsSL https://raw.github.com/gist/323731)"`
@@ -17,7 +17,7 @@ Stop the server with
 5. If you run into trouble importing SQL files, increase the max allowed packet size
 `cat /etc/my.cnf`
 [mysqld]
-#Max packetlength to send/receive from to server.
+##Max packetlength to send/receive from to server.
 max_allowed_packet=64M
 
 6. If needed, specify mysql2 in your Gemfile
