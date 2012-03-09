@@ -1,3 +1,6 @@
+<h3>
+PRESS
+</h3>
 <% if(@press_items.count > 0) then %>
 <% @press_items.each do |press_item| %>
     <div class="press_item">
@@ -8,8 +11,8 @@
                         <%= press_item.publication %> /
         </span>
         <span class="pi_date">
-                        <%= press_item.date %>
-        </span>
+			<%= press_item.date.to_date %>
+		</span>
     </div>
 <% end %>
 <br />
