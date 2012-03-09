@@ -14,6 +14,13 @@ RailsAdmin.config do |config|
   # or for a dynamic name:
   # config.main_app_name = Proc.new { |controller| [Rails.application.engine_name.titleize, controller.params['action'].titleize] }
 
+  config.models do
+    fields_of_type :text do
+      ckeditor true
+    end
+  end
+
+
   #  ==> Authentication (before_filter)
   # This is run inside the controller instance so you can setup any authentication you need to.
   # By default, the authentication will run via warden if available.
@@ -193,11 +200,11 @@ RailsAdmin.config do |config|
    config.model Project do
      # Found associations:
        #field :galleries, :has_many_association 
-       field :project_types, :has_and_belongs_to_many_association   #   # Found columns:
-       #field :id, :integer 
+              #field :id, :integer 
        field :title, :string 
-       field :description, :text 
-       field :status, :string 
+       field :description, :text
+	   field :status, :string 
+	   field :project_types, :has_and_belongs_to_many_association   #   # Found columns:
        field :city, :string 
        field :state, :string 
        field :zip, :string 
