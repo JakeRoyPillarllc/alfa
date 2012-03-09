@@ -23,6 +23,7 @@ clear:both;
 
 #hd_tagline {float:right; height:60px; font-size:11px; font-weight:599;}
 #hd_tagline p{ text-align:right;  text-transform:uppercase; margin:20px 0 0 0; letter-spacing:.000001em;}
+.heading_indent { text-indent: 50px; }
 
 /* content styles */
 
@@ -107,7 +108,7 @@ div.tm_member{float:left; clear:both; padding:20px 0px 0px 35px;}
 
 /* press page */
 
-.press_item{float:left; clear:both; padding:20px 0px 0px 35px;}
+.press_item{float:left; clear:both; padding:20px 0px 0px 50px;}
 .pi_title{font-weight:bold;}
 .pi_publ{font-weight:bold;}
 .pi_date{}
