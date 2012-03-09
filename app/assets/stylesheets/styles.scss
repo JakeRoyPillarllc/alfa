@@ -7,6 +7,7 @@ a img {border:none;}
 ul{}
 a{color:black; text-decoration:none;}
 h3 {color:#FF0000; font-weight:bolder;}
+h2 {color:#FF0000; font-weight:bolder;}
 
 /* header */
 #header{
@@ -23,7 +24,7 @@ clear:both;
 
 #hd_tagline {float:right; height:60px; font-size:11px; font-weight:599;}
 #hd_tagline p{ text-align:right;  text-transform:uppercase; margin:20px 0 0 0; letter-spacing:.000001em;}
-.heading_indent { text-indent: 50px; }
+.heading_indent { margin-left: 50px; margin-bottom: 0px; }
 
 /* content styles */
 
@@ -31,7 +32,7 @@ clear:both;
 #content_wide h3{text-transform:uppercase; padding:0px 60px 5px 35px; margin:30px 0px 2px 0px;}
 
 #content_wide .about_p{padding:0px 0px 10px 35px; width:700px; margin:0px; font-weight:bold;  text-align:justify;}
-#content_wide .wide_p{padding:0px 0px 10px 35px; width:765px; margin:0px;  text-align:justify; }
+#content_wide .wide_p{padding:0px 0px 10px 50px; width:765px; margin:0px;  text-align:justify; }
 #content_wide .proj_p{padding:0px 0px 0px 35px; width:765px; margin:0px;  text-align:justify; }
 
 #content_wide.proj{ border-top:#555555 solid medium;}
@@ -44,7 +45,7 @@ clear:both;
 
 /* team page */
 
-div.tm_member{float:left; clear:both; padding:20px 0px 0px 35px;}
+div.tm_member{float:left; clear:both; padding:0px 0px 0px 35px;}
 .tm_member_img{ float:left; clear:left; }
 .tm_desc_wrap{ float:left; clear:right; padding:0px 0px 0px 15px; width:875px;}
 .tm_member_h5{padding:0px 0px 5px 0px; color:#FF0000;}
