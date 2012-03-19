@@ -1,7 +1,7 @@
 <h2 class="heading_indent">
 ALFA PROJECTS
 </h2>
-<%= raw @narrative.body %>
+<%= raw @narrative.body if @narrative.body %>
 
 <div class="left_p">
 <%= render :partial => 'projects/accordion', :locals => {:class_wrapper => "pl_white_backg"} %>
