@@ -5,6 +5,7 @@ class ProjectsController < ApplicationController
   def index
     @projects = Project.all
     @new_projs = Project.all
+    @narrative = Narrative.find_by_name('projects')
 
     respond_to do |format|
       format.html # index.html.erb

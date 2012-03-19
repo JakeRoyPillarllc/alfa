@@ -1,9 +1,8 @@
 <h2 class="heading_indent">
 ALFA PROJECTS
 </h2>
-<p  class="proj_p heading_indent">
-With over $350 million in real-estate development projects across a spectrum of residential, hospitality, commercial & community projects, Alfa Development has positioned itself as the forefront boutique developer in Downtown New York City. Constantly defining trends, Alfa’s projects continue to innovate and guide the fields of architecture, project marketing and sustainable building.
-</p>
+<%= raw @narrative.body %>
+
 <div class="left_p">
 <%= render :partial => 'projects/accordion', :locals => {:class_wrapper => "pl_white_backg"} %>
 <%# @projects.each do |project| %>
