@@ -5,6 +5,12 @@ class PressItemsController < ApplicationController
   def index
     @press_items = PressItem.all
 
+    #list all press items in reverse chronological order - 20120511 PAWS
+    #@press_items = PressItem.find(:all, :order => "date desc")
+
+    @press_items = PressItem.order("date DESC")
+
+
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @press_items }
